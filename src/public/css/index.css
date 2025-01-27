@@ -39,6 +39,14 @@
     margin-bottom: 15px;
 }
 
+.form__input--text{
+margin-left: 5px;
+    padding: 4px 6px;
+    border-radius: 3px;
+    background: #fafafa;
+    color: #aaa;
+}
+
 .form__label--required {
     margin-left: 5px;
     padding: 4px 6px;
