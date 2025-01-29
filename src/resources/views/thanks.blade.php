@@ -8,4 +8,5 @@
     <h2>お問い合わせありがとうございました</h2>
   </div>
 </div>
+<button class="form__button-submit" type="submit">HOME</button>
 @endsection

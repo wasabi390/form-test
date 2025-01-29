@@ -31,7 +31,9 @@
       </div>
       <div class="form__group-content">
         <div class="form__input--radio">
-          <input type="radio" name="sex" value=男性/>
+          <input type="radio" name="sex" value="男性"cheked>男性
+          <input type="radio" name="sex" value="女性">女性
+          <input type="radio" name="sex" value="その他">その他
         </div>
       </div>
     </div>
@@ -82,7 +84,7 @@
     </div>
     <div class="form__group">
       <div class="form__group-title">
-        <span class="form__label--item">お名前</span>
+        <span class="form__label--item">建物名</span>
       </div>
       <div class="form__group-content">
         <div class="form__input--text">
