@@ -1,4 +1,4 @@
-o@extends('layouts.app')
+@extends('layouts.app')
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/index.css') }}">
 @endsection
@@ -16,8 +16,7 @@ o@extends('layouts.app')
       </div>
       <div class="form__group-content">
         <div class="form__input--text">
-          <input type="text" name="name" placeholder="例：山田" value="{{ old('name') }}" />
-          <input type="text" name="name" placeholder="例：太郎" value="{{ old('name') }}" />
+          <input type="text" name="name" placeholder="テスト太郎" value="{{ old('name') }}" />
         </div>
         <div class="form__error">
           @error('name')
@@ -32,14 +31,7 @@ o@extends('layouts.app')
       </div>
       <div class="form__group-content">
         <div class="form__input--radio">
-          <input type="radio" name="gender" placeholder="男性" value="{{ old('name') }}" checkd/>
-          <input type="radio" name="gender" placeholder="女性" value="{{ old('name') }}" />
-          <input type="radio" name="gender" placeholder="その他" value="{{ old('name') }}" />
-        </div>
-        <div class="form__error">
-          @error('name')
-          {{ $message }}
-          @enderror
+          <input type="radio" name="sex" value=男性/>
         </div>
       </div>
     </div>
@@ -79,10 +71,10 @@ o@extends('layouts.app')
       </div>
       <div class="form__group-content">
         <div class="form__input--text">
-          <input type="tel" name="tel" placeholder="東京都渋谷区千駄々谷1-2-3" value="{{ old('tel') }}" />
+          <input type="text" name="address" placeholder="東京都千駄々谷" value="{{ old('name') }}" />
         </div>
         <div class="form__error">
-          @error('tel')
+          @error('name')
           {{ $message }}
           @enderror
         </div>
@@ -90,14 +82,14 @@ o@extends('layouts.app')
     </div>
     <div class="form__group">
       <div class="form__group-title">
-        <span class="form__label--item">建物名</span>
+        <span class="form__label--item">お名前</span>
       </div>
       <div class="form__group-content">
         <div class="form__input--text">
-          <input type="tel" name="tel" placeholder="千駄々谷マンション101" value="{{ old('tel') }}" />
+          <input type="text" name="Building name" placeholder="東京都千駄々谷マンション" value="{{ old('name') }}" />
         </div>
         <div class="form__error">
-          @error('tel')
+          @error('name')
           {{ $message }}
           @enderror
         </div>
@@ -105,25 +97,21 @@ o@extends('layouts.app')
     </div>
     <div class="form__group">
       <div class="form__group-title">
-        <span class="form__label--item">お問い合わせの種類
-        </span>
+        <span class="form__label--item">お問い合わせ内容</span>
       </div>
       <div class="form__group-content">
-        <div class="form__input--text">
-          <select name="contactkinds">
-            <option value>商品のお届けについて</option>
-            <option value>商品の交換について</option>
-            <option value>商品トラブル</option>
-            <option value>ショップへのお問い合わせ</option>
-            <option value>その他</option>
-          </select>
-          <input type="tel" name="tel" placeholder="選択してください" value="{{ old('tel') }}" />
-        </div>
-        <div class="form__error">
-          @error('tel')
-          {{ $message }}
-          @enderror
-        </div>
+        <div class="form__input--select">
+          <form action="detail.html" method="get">
+            <select name="select" name="contact" placeholder=選択してください>
+              <option value="お届け">選択してください</option>
+              <option value="お届け">商品のお届けについて</option>
+              <option value="交換">商品の交換について</option>
+              <option value="トラブル">商品トラブル</option>
+              <option value="問い合わせ">ショップへの問い合わせ</option>
+              <option value="その他">その他</option>
+            </select>
+          </form>
+      </div>
       </div>
     </div>
     <div class="form__group">
