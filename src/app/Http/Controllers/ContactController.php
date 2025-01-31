@@ -9,7 +9,31 @@ class ContactController extends Controller
 {
   public function index()
   {
-    return view('index');
+    return view('register');
+  }
+
+  public function register(ContactRequest $request)
+  {
+    $contact = $request->only(['name','email', 'password']);
+    return view('login', compact('contact'));
+  }
+
+  public function login(ContactRequest $request)
+  {
+    $contact = $request->only(['email', 'password']);
+    return view('admin', compact('contact'));
+  }
+
+  public function admin(ContactRequest $request)
+  {
+    $contact = $request->only(['name','email', 'password']);
+    return view('index', compact('contact'));
+  }
+
+  public function contact(ContactRequest $request)
+  {
+    $contact = $request->only(['name','email', 'password']);
+    return view('login', compact('contact'));
   }
 
   public function confirm(ContactRequest $request)

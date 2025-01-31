@@ -9,7 +9,7 @@
     <h2>confirm</h2>
   </div>
   <?php print_r($contact['name']) ?>
-  <form class="form" action="/contacts" method="post">
+  <form class="form" action="/contact" method="post">
     @csrf
     <div class="confirm-table">
       <table class="confirm-table__inner">

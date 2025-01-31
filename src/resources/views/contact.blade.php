@@ -8,7 +8,7 @@
   <div class="contact-form__heading">
     <h2>Contact</h2>
   </div>
-  <form class="form" action="contacts/confirm" method="post">
+  <form class="form" action="admin" method="post">
     @csrf
     <div class="form__group">
       <div class="form__group-title">
@@ -99,7 +99,7 @@
     </div>
     <div class="form__group">
       <div class="form__group-title">
-        <span class="form__label--item">お問い合わせ内容</span>
+        <span class="form__label--item">お問い合わせの種類</span>
       </div>
       <div class="form__group-content">
         <div class="form__input--select">
