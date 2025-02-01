@@ -88,7 +88,7 @@
       </div>
       <div class="form__group-content">
         <div class="form__input--text">
-          <input type="text" name="Building name" placeholder="東京都千駄々谷マンション" value="{{ old('name') }}" />
+          <input type="text" name="building" placeholder="東京都千駄々谷マンション" value="{{ old('building') }}" />
         </div>
         <div class="form__error">
           @error('name')
@@ -103,7 +103,6 @@
       </div>
       <div class="form__group-content">
         <div class="form__input--select">
-          <form action="detail.html" method="get">
             <select name="select" name="contact" placeholder=選択してください>
               <option value="お届け">選択してください</option>
               <option value="お届け">商品のお届けについて</option>
@@ -112,7 +111,6 @@
               <option value="問い合わせ">ショップへの問い合わせ</option>
               <option value="その他">その他</option>
             </select>
-          </form>
       </div>
       </div>
     </div>
