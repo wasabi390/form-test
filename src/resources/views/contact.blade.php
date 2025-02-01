@@ -126,8 +126,8 @@
         </div>
       </div>
     </div>
-    <div class="form__button">
-      <button class="form__button-submit" type="submit">送信</button>
+    <div>
+      <button  type="submit">送信</button>
     </div>
   </form>
 </div>

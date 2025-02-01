@@ -9,7 +9,7 @@ class ContactController extends Controller
 {
   public function index()
   {
-    return view('register');
+    return view('contact');
   }
 
   public function register(ContactRequest $request)
