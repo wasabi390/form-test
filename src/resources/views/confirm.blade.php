@@ -9,7 +9,7 @@
     <h2>confirm</h2>
   </div>
   <?php print_r($contact['name']) ?>
-  <form class="form" action="/contact" method="post">
+  <form class="form" action="/thanks" method="post">
     @csrf
     <div class="confirm-table">
       <table class="confirm-table__inner">
@@ -22,7 +22,7 @@
         <tr class="confirm-table__row">
           <th class="confirm-table__header">性別</th>
           <td class="confirm-table__radio">
-            <input type="radio" name="sex" value="{{ $contact['sex'] }}" readonly />
+            <input type="radio" name="gender" value="{{ $contact['sex'] }}" readonly />
           </td>
         </tr>
         <tr class="confirm-table__row">
@@ -46,7 +46,7 @@
         <tr class="confirm-table__row">
           <th class="confirm-table__header">建物名</th>
           <td class="confirm-table__text">
-            <input type="text" name="Building name" value="{{ $contact['Building name'] }}" readonly />
+            <input type="text" name="building" value="{{ $contact['building'] }}" readonly />
           </td>
         </tr>
         <tr class="confirm-table__row">

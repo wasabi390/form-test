@@ -8,7 +8,7 @@
   <div class="contact-form__heading">
     <h2>Contact</h2>
   </div>
-  <form class="form" action="admin" method="post">
+  <form class="form" action="/confirm" method="post">
     @csrf
     <div class="form__group">
       <div class="form__group-title">
@@ -31,9 +31,9 @@
       </div>
       <div class="form__group-content">
         <div class="form__input--radio">
-          <input type="radio" name="sex" value="男性"cheked>男性
-          <input type="radio" name="sex" value="女性">女性
-          <input type="radio" name="sex" value="その他">その他
+          <input type="radio" name="gender" value="男性"checked>男性
+          <input type="radio" name="gender" value="女性">女性
+          <input type="radio" name="gender" value="その他">その他
         </div>
       </div>
     </div>
@@ -73,10 +73,10 @@
       </div>
       <div class="form__group-content">
         <div class="form__input--text">
-          <input type="text" name="address" placeholder="東京都千駄々谷" value="{{ old('name') }}" />
+          <input type="text" name="address" placeholder="東京都千駄々谷" value="{{ old('address') }}" />
         </div>
         <div class="form__error">
-          @error('name')
+          @error('address')
           {{ $message }}
           @enderror
         </div>
@@ -91,7 +91,7 @@
           <input type="text" name="building" placeholder="東京都千駄々谷マンション" value="{{ old('building') }}" />
         </div>
         <div class="form__error">
-          @error('name')
+          @error('building')
           {{ $message }}
           @enderror
         </div>
@@ -103,7 +103,7 @@
       </div>
       <div class="form__group-content">
         <div class="form__input--select">
-            <select name="select" name="contact" placeholder=選択してください>
+            <select name="select" name="detail" placeholder=選択してください>
               <option value="お届け">選択してください</option>
               <option value="お届け">商品のお届けについて</option>
               <option value="交換">商品の交換について</option>
@@ -111,7 +111,7 @@
               <option value="問い合わせ">ショップへの問い合わせ</option>
               <option value="その他">その他</option>
             </select>
-      </div>
+        </div>
       </div>
     </div>
     <div class="form__group">
@@ -120,12 +120,12 @@
       </div>
       <div class="form__group-content">
         <div class="form__input--textarea">
-          <textarea name="content" placeholder="お問い合わせ内容をご記入ください">{{ old('content') }}</textarea>
+          <textarea name="contact" placeholder="お問い合わせ内容をご記入ください">{{ old('content') }}</textarea>
         </div>
       </div>
     </div>
     <div>
-      <button  type="submit">送信</button>
+      <button type="submit">送信</button>
     </div>
   </form>
 </div>
