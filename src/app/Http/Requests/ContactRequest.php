@@ -24,10 +24,13 @@ class ContactRequest extends FormRequest
     public function rules()
     {
         return [
-        'name' => ['required', 'string', 'max:255'],
+        'first_name' => ['required', ],
+        'last_name' => ['required', ],
         'gender' => ['required',],
-        'email' => ['required', 'string', 'email', 'max:255'],
-        'tel' => ['required', 'numeric', 'digits_between:10,11'],
+        'email' => ['required', 'email',],
+        'tel_1' => ['required', ],
+        'tel_2' => ['required', ],
+        'tel_3' => ['required', ],
         'address' => ['required',],
         'detail' => ['required',],
         'contact' => ['required','max:120'],
@@ -37,20 +40,17 @@ class ContactRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => '名前を入力してください',
-            'name.string' => '名前を文字列で入力してください',
-            'name.max' => '名前を255文字以下で入力してください',
-            'gender' => '性別を選択してください',
+            'first_name.required' => '名前を入力してください',
+            'last_name.required' => '名前を入力してください',
+            'gender.required' => '性別を選択してください',
             'email.required' => 'メールアドレスを入力してください',
-            'email.string' => 'メールアドレスはメール形式で入力してください',
             'email.email' => 'メールアドレスは「ユーザー名@ドメイン」形式で入力してください',
-            'email.max' => 'メールアドレスを255文字以下で入力してください',
-            'tel.required' => '電話番号を入力してください',
-            'tel.numeric' => '電話番号を数値で入力してください',
-            'tel.digits_between' => '電話番号は5桁までの数字で入力してください',
-            'address' => '住所を入力してください',
-            'detail' => 'お問い合わせの種類を選択してください',
-            'contact' => 'お問い合わせ内容を入力してください',
+            'tel_1.required' => '電話番号を入力してください',
+            'tel_2.required' => '電話番号を入力してください',
+            'tel_3.required' => '電話番号を入力してください',
+            'address.required' => '住所を入力してください',
+            'detail.required' => 'お問い合わせの種類を選択してください',
+            'contact.required' => 'お問い合わせ内容を入力してください',
             'contact.max' => 'お問合せ内容は120文字以内で入力してください',
         ];
     }

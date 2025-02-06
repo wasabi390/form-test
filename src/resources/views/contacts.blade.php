@@ -16,7 +16,8 @@
       </div>
       <div class="form__group-content">
         <div class="form__input--text">
-          <input type="text" name="name" placeholder="テスト太郎" value="{{ old('name') }}" />
+          <input type="text" name="first_name" placeholder="例:山田" value="{{ old('name') }}" />
+          <input type="text" name="last_name" placeholder="例:太郎" value="{{ old('name') }}" />
         </div>
         <div class="form__error">
           @error('name')
@@ -34,6 +35,11 @@
           <input type="radio" name="gender" value="男性"checked>男性
           <input type="radio" name="gender" value="女性">女性
           <input type="radio" name="gender" value="その他">その他
+        </div>
+        <div class="form__error">
+          @error('gender')
+          {{ $message }}
+          @enderror
         </div>
       </div>
     </div>
@@ -58,7 +64,12 @@
       </div>
       <div class="form__group-content">
         <div class="form__input--text">
-          <input type="tel" name="tel" placeholder="09012345678" value="{{ old('tel') }}" />
+          <input type="tel" name="tel_1" placeholder="090" value="{{ old('tel') }}" />
+          <span>-</span>
+          <input type="tel" name="tel_2" placeholder="1234" value="{{ old('tel') }}" />
+          <span>-</span>
+          <input type="tel" name="tel_3" placeholder="5678" value="{{ old('tel') }}" />
+          <span>-</span>
         </div>
         <div class="form__error">
           @error('tel')
@@ -112,6 +123,11 @@
               <option value="その他">その他</option>
             </select>
         </div>
+        <div class="form__error">
+          @error('detail')
+          {{ $message }}
+          @enderror
+        </div>
       </div>
     </div>
     <div class="form__group">
@@ -122,10 +138,15 @@
         <div class="form__input--textarea">
           <textarea name="contact" placeholder="お問い合わせ内容をご記入ください">{{ old('content') }}</textarea>
         </div>
+        <div class="form__error">
+          @error('contact')
+          {{ $message }}
+          @enderror
+        </div>
       </div>
     </div>
     <div>
-      <button type="submit">送信</button>
+      <button class="form__button-submit" type="submit">送信</button>
     </div>
   </form>
 </div>
