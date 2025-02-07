@@ -14,5 +14,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call(AuthorsTableSeeder::class);
+        Author::factory(35)->create();
     }
 }
