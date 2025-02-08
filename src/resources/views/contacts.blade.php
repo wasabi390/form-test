@@ -114,7 +114,7 @@
       </div>
       <div class="form__group-content">
         <div class="form__input--select">
-            <select name="select" name="detail" placeholder=選択してください>
+            <select class="select" name="detail" placeholder=選択してください>
               <option value="お届け">選択してください</option>
               <option value="お届け">商品のお届けについて</option>
               <option value="交換">商品の交換について</option>
