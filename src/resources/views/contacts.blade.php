@@ -115,11 +115,11 @@
       <div class="form__group-content">
         <div class="form__input--select">
             <select class="select" name="detail" placeholder=選択してください>
-              <option value="お届け">選択してください</option>
-              <option value="お届け">商品のお届けについて</option>
-              <option value="交換">商品の交換について</option>
-              <option value="トラブル">商品トラブル</option>
-              <option value="問い合わせ">ショップへの問い合わせ</option>
+              <option value="選択してください">選択してください</option>
+              <option value="商品のお届けについて">商品のお届けについて</option>
+              <option value="商品の交換について">商品の交換について</option>
+              <option value="商品トラブル">商品トラブル</option>
+              <option value="ショップへの問い合わせ">ショップへの問い合わせ</option>
               <option value="その他">その他</option>
             </select>
         </div>

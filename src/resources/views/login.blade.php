@@ -8,7 +8,7 @@
     <div class="contact-form__heading">
         <h2>Login</h2>
     </div>
-    <form class="form" action="/register" method="post">
+    <form class="form" action="/admin" method="post">
         @csrf
         <div class="form__group">
             <div class="form__group-title">

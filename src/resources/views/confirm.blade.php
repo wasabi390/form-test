@@ -8,7 +8,6 @@
   <div class="confirm__heading">
     <h2>confirm</h2>
   </div>
-  <?php print_r($contact['name']) ?>
   <form class="form" action="/thanks" method="post">
     @csrf
     <div class="confirm-table">
@@ -16,8 +15,8 @@
         <tr class="confirm-table__row">
           <th class="confirm-table__header">お名前</th>
           <td class="confirm-table__text">
-            <input type="text" name="first_name" value="{{ $contact['name'] }}" readonly />
-            <input type="text" name="last_name" value="{{ $contact['name'] }}" readonly />
+            <input type="text" name="first_name" value="{{ $contact['first_name'] }}" readonly />
+            <input type="text" name="last_name" value="{{ $contact['last_name'] }}" readonly />
           </td>
         </tr>
         <tr class="confirm-table__row">
@@ -35,7 +34,9 @@
         <tr class="confirm-table__row">
           <th class="confirm-table__header">電話番号</th>
           <td class="confirm-table__text">
-            <input type="tel" name="tel" value="{{ $contact['tel'] }}" readonly />
+            <input type="tel" name="tel" value="{{ $contact['tel_1'] }}" readonly />
+            <input type="tel" name="tel" value="{{ $contact['tel_2'] }}" readonly />
+            <input type="tel" name="tel" value="{{ $contact['tel_3'] }}" readonly />
           </td>
         </tr>
         <tr class="confirm-table__row">
@@ -53,13 +54,13 @@
         <tr class="confirm-table__row">
           <th class="confirm-table__header">お問い合わせ内容</th>
           <td class="confirm-table__select">
-            <input type="select" name="contact" value="{{ $contact['select'] }}" readonly />
+            <input type="select" name="contact" value="{{ $contact['detail'] }}" readonly />
           </td>
         </tr>
         <tr class="confirm-table__row">
           <th class="confirm-table__header">お問い合わせ内容</th>
           <td class="confirm-table__text">
-            <input type="text" name="content" value="{{ $contact['content'] }}" readonly />
+            <input type="text" name="content" value="{{ $contact['contact'] }}" readonly />
           </td>
         </tr>
       </table>
