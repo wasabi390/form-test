@@ -4,9 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use App\Models\Author;
 
-class AuthorsTableSeeder extends Seeder
+class CategoriesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -22,6 +21,11 @@ class AuthorsTableSeeder extends Seeder
             "ショップへのお問い合わせ",
             "その他"
         ];
-        DB::table('detail')->insert($contents);
+
+        foreach ($contents as $content) {
+            DB::table('categories')->insert([
+                'content' => $content,
+            ]);
+        }
     }
 }
