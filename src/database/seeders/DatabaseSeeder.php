@@ -17,5 +17,6 @@ class DatabaseSeeder extends Seeder
             CategoriesTableSeeder::class,
             ContactsTableSeeder::class
         ]);
+            $this->call(AuthorsTableSeeder::class);
     }
 }
