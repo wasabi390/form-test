@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\Author;
 
 class DatabaseSeeder extends Seeder
 {
@@ -17,6 +18,6 @@ class DatabaseSeeder extends Seeder
             CategoriesTableSeeder::class,
             ContactsTableSeeder::class
         ]);
-            $this->call(AuthorsTableSeeder::class);
+            Author::factory(35)->create();
     }
 }

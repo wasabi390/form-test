@@ -2,7 +2,7 @@
 
 namespace Database\Factories;
 
-use App\Models\Author;
+use App\Models\Contact;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class AuthorFactory extends Factory
@@ -23,6 +23,7 @@ class AuthorFactory extends Factory
     public function definition()
     {
     return [
+        'category_id' => $this->faker->numberBetween(1, 5),
         'first_name' => $this->faker->first_name,
         'last_name' => $this->faker->last_name,
         'gender' => $this->faker->randomElement([1, 2, 3]),

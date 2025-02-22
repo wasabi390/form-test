@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Contact;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Seeder;
 
 class ContactsTableSeeder extends Seeder
